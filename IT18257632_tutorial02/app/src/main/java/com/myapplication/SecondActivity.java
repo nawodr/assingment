@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private int num1Val;
-    private int num2Val;
+    private int no1Val;
+    private int no2Val;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,41 +20,42 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        num1Val = extras.getInt("num1");
-        num2Val = extras.getInt("num2");
+
+        no1Val = extras.getInt("no1");
+        no2Val = extras.getInt("no2");
 
         TextView textView1 = findViewById(R.id.editText);
-        textView1.setText(Integer.toString(num1Val));
+        textView1.setText(Integer.toString(no1Val));
 
         TextView textView2 = findViewById(R.id.editText2);
-        textView2.setText(Integer.toString(num2Val));
+        textView2.setText(Integer.toString(no2Val));
     }
 
-    public void addition(View view) {
-        int ans = num1Val +  num2Val;
+    public void addition(View v) {
+        int ans = no1Val +  no2Val;
 
         TextView answertxt = findViewById(R.id.answer);
-        answertxt.setText(Integer.toString(num1Val) + " + " + Integer.toString(num2Val) + " = " + Integer.toString(ans));
+        answertxt.setText(Integer.toString(no1Val) + " + " + Integer.toString(no2Val) + " = " + Integer.toString(ans));
     }
 
     public void subtractions(View view) {
-        int ans = num1Val -  num2Val;
+        int ans = no1Val -  no2Val;
 
         TextView answertxt = findViewById(R.id.answer);
-        answertxt.setText(Integer.toString(num1Val) + " - " + Integer.toString(num2Val) + " = " + Integer.toString(ans));
+        answertxt.setText(Integer.toString(no1Val) + " - " + Integer.toString(no2Val) + " = " + Integer.toString(ans));
     }
 
     public void multiplication(View view) {
-        int ans = num1Val *  num2Val;
+        int ans = no1Val *  no2Val;
 
         TextView answertxt = findViewById(R.id.answer);
-        answertxt.setText(Integer.toString(num1Val) + " * " + Integer.toString(num2Val) + " = " + Integer.toString(ans));
+        answertxt.setText(Integer.toString(no2Val) + " * " + Integer.toString(no2Val) + " = " + Integer.toString(ans));
     }
 
     public void division(View view) {
-        int ans = num1Val /  num2Val;
+        int ans = no2Val /  no2Val;
 
         TextView answertxt = findViewById(R.id.answer);
-        answertxt.setText(Integer.toString(num1Val) + " / " + Integer.toString(num2Val) + " = " + Integer.toString(ans));
+        answertxt.setText(Integer.toString(no1Val) + " / " + Integer.toString(no2Val) + " = " + Integer.toString(ans));
     }
 }

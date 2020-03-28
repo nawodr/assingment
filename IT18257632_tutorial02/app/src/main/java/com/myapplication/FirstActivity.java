@@ -25,13 +25,14 @@ public class FirstActivity extends AppCompatActivity {
                 Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
                 Bundle extras = new Bundle();
 
-                EditText num1Value = (EditText) findViewById(R.id.num1_value);
-                String num1 = num1Value.getText().toString();
-                EditText num2Value = (EditText) findViewById(R.id.num2_value);
-                String num2 = num2Value.getText().toString();
+                EditText no1Value = (EditText) findViewById(R.id.no1Value);
+                String no1 = no1Value.getText().toString();
 
-                extras.putInt("num1", Integer.parseInt(num1));
-                extras.putInt("num2", Integer.parseInt(num2));
+                EditText no2Value = (EditText) findViewById(R.id.no2Value);
+                String no2 = no2Value.getText().toString();
+
+                extras.putInt("no1", Integer.parseInt(no1));
+                extras.putInt("no1", Integer.parseInt(no2));
 
                 intent.putExtras(extras);
 
